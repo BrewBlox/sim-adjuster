@@ -18,8 +18,8 @@ ENV SERVICE_INFO=${service_info}
 COPY --from=base /wheeley /wheeley
 COPY ./config /app/config
 
-RUN pip3 install --no-index --find-links=/wheeley YOUR-PACKAGE \
+RUN pip3 install --no-index --find-links=/wheeley sim-adjuster \
     && rm -rf /wheeley \
     && pip3 freeze
 
-ENTRYPOINT ["python3", "-m", "YOUR_PACKAGE"]
+ENTRYPOINT ["python3", "-m", "sim_adjuster"]

@@ -4,7 +4,7 @@ Checks whether we can call the hello endpoint.
 
 import pytest
 
-import YOUR_PACKAGE.__main__ as main
+import sim_adjuster.__main__ as main
 
 
 @pytest.fixture
